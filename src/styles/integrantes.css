@@ -1,0 +1,44 @@
+.integrantes-container{
+  margin-top: 100px;
+}
+
+.contenedor-integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.tarjeta-integrante {
+  background-color: white;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.tarjeta-integrante:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-integrante img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-integrante h3 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.tarjeta-integrante p {
+  font-size: 0.95rem;
+  color: #555;
+}

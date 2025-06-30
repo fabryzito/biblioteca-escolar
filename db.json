@@ -1,0 +1,109 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "1234",
+      "rol": "admin"
+    },
+    {
+      "id": "2",
+      "username": "franco",
+      "password": "1234",
+      "rol": "user"
+    }
+  ],
+  "libros": [
+    {
+      "id": "255c",
+      "titulo": "Caperusita Roja",
+      "autor": "Nose",
+      "year": "2022",
+      "stock": "0"
+    },
+    {
+      "id": "256d",
+      "titulo": "El Principito",
+      "autor": "Antoine de Saint-Exupéry",
+      "year": "1943",
+      "stock": 2
+    },
+    {
+      "id": "257e",
+      "titulo": "Don Quijote",
+      "autor": "Miguel de Cervantes",
+      "year": "1605",
+      "stock": 0
+    },
+    {
+      "id": "2ca3",
+      "titulo": "Libro de la selva",
+      "autor": "gustavo",
+      "year": "2020",
+      "stock": "15"
+    },
+    {
+      "id": "071c",
+      "titulo": "Quijote",
+      "autor": "franco",
+      "year": "2002",
+      "stock": "90"
+    }
+  ],
+  "alumnos": [
+    {
+      "id": "5d38",
+      "nombre": "Franco",
+      "dni": "45876903",
+      "curso": "6to A"
+    },
+    {
+      "id": "6e49",
+      "nombre": "María García",
+      "dni": "12345678",
+      "curso": "5to B"
+    }
+  ],
+  "prestamos": [
+    {
+      "alumnoId": "5d38",
+      "libroId": "256d",
+      "fechaDevolucion": "2025-06-28",
+      "fechaEntrega": "2025-06-24",
+      "id": "0eac"
+    },
+    {
+      "id": "42eb",
+      "alumnoId": "5d38",
+      "libroId": "255c",
+      "fechaEntrega": "2025-06-27",
+      "fechaDevolucion": "2025-06-29"
+    }
+  ],
+  "integrantes": [
+    {
+      "id": "1",
+      "nombre": "López Lisandro",
+      "legajo": "Legajo: 62105",
+      "foto": "src/img/imgLisandro.jpg"
+    },
+    {
+      "id": "2",
+      "nombre": "Ochoa Matías",
+      "legajo": "Legajo: 62106",
+      "foto": "src/img/imgMatias.jpg"
+    },
+    {
+      "id": "3",
+      "nombre": "Vieytes Franco",
+      "legajo": "Legajo: 62090",
+      "foto": "src/img/imgFranco2.jpeg"
+    },
+    {
+      "id": "4",
+      "nombre": "Zito Fabrizzio",
+      "legajo": "Legajo: 61999",
+      "foto": "src/img/imgFabri.jpg"
+    }
+  ]
+}

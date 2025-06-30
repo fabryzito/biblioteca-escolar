@@ -1,0 +1,447 @@
+/* src/styles/alumnos.css */
+
+.alumnos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  /* Remover min-height ya que se maneja en App.css */
+}
+
+/* Agregar clase para el contenido de admin */
+.admin-content .alumnos-container {
+  padding-bottom: 2rem; /* Espacio adicional antes del footer */
+}
+
+/* Header de la sección */
+.alumnos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.alumnos-title {
+  margin: 0 0 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  letter-spacing: 0.5px;
+}
+
+.alumnos-subtitle {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #a9b2bc;
+  font-weight: 400;
+}
+
+/* Acciones principales */
+.alumnos-actions {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+  color: #e0e1dd;
+  border: 2px solid #4fb0c6;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(13, 27, 42, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4fb0c6 0%, #3ba3ad 100%);
+  color: #0d1b2a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 176, 198, 0.3);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Estadísticas */
+.alumnos-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: rgba(13, 27, 42, 0.05);
+  border: 1px solid rgba(79, 176, 198, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(79, 176, 198, 0.1);
+  border-color: #4fb0c6;
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #a9b2bc;
+  font-weight: 500;
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(13, 27, 42, 0.05);
+  border-radius: 16px;
+  border: 2px dashed rgba(79, 176, 198, 0.3);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #0d1b2a;
+  font-weight: 600;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #a9b2bc;
+}
+
+/* Contenedor de tabla */
+.table-container {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(79, 176, 198, 0.2);
+  margin-top: 2rem;
+}
+
+/* Tabla de alumnos */
+.alumnos-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Encabezado de tabla */
+.alumnos-table thead {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+}
+
+.alumnos-table th {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #e0e1dd;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #4fb0c6;
+}
+
+.alumnos-table th:first-child {
+  padding-left: 1.5rem;
+}
+
+.alumnos-table th:last-child {
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+/* Filas de la tabla */
+.alumnos-table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(79, 176, 198, 0.1);
+}
+
+.alumnos-table tbody tr:hover {
+  background: rgba(79, 176, 198, 0.05);
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(79, 176, 198, 0.1);
+}
+
+.alumnos-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Alternancia de colores en filas */
+.row-even {
+  background: #ffffff;
+}
+
+.row-odd {
+  background: rgba(79, 176, 198, 0.02);
+}
+
+/* Celdas de la tabla */
+.alumnos-table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #0d1b2a;
+  vertical-align: middle;
+}
+
+.alumnos-table td:first-child {
+  padding-left: 1.5rem;
+}
+
+.alumnos-table td:last-child {
+  padding-right: 1.5rem;
+}
+
+/* Estilos específicos por celda */
+.id-cell {
+  font-weight: 600;
+  color: #a9b2bc;
+  font-size: 0.9rem;
+}
+
+.nombre-cell {
+  font-weight: 600;
+  color: #0d1b2a;
+  max-width: 250px;
+}
+
+.dni-cell {
+  color: #a9b2bc;
+  font-weight: 500;
+  font-family: "Courier New", monospace;
+}
+
+.curso-cell {
+  text-align: center;
+}
+
+.actions-cell {
+  text-align: center;
+}
+
+/* Badge de curso */
+.curso-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #4fb0c6, #3ba3ad);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(79, 176, 198, 0.3);
+}
+
+/* Botones de acción en tabla */
+.btn-edit-table,
+.btn-delete-table {
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit-table {
+  background: rgba(79, 176, 198, 0.1);
+  color: #4fb0c6;
+  border: 1px solid rgba(79, 176, 198, 0.3);
+}
+
+.btn-edit-table:hover {
+  background: #4fb0c6;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 176, 198, 0.3);
+}
+
+.btn-delete-table {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.btn-delete-table:hover {
+  background: #ff6b6b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Responsive para tabla */
+@media (max-width: 1024px) {
+  .alumnos-table th,
+  .alumnos-table td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .nombre-cell {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .alumnos-container {
+    margin: 0 1rem 2rem;
+    margin-top: 140px; /* Mantener el espacio para ambas barras */
+    padding: 1rem;
+  }
+
+  .alumnos-title {
+    font-size: 2rem;
+  }
+
+  .alumnos-subtitle {
+    font-size: 1rem;
+  }
+
+  .alumnos-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+  }
+
+  .alumnos-table {
+    min-width: 600px;
+  }
+
+  .alumnos-table th,
+  .alumnos-table td {
+    padding: 0.7rem 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .alumnos-table th:first-child,
+  .alumnos-table td:first-child {
+    padding-left: 1rem;
+  }
+
+  .alumnos-table th:last-child,
+  .alumnos-table td:last-child {
+    padding-right: 1rem;
+  }
+
+  .nombre-cell {
+    max-width: 150px;
+  }
+
+  .btn-edit-table,
+  .btn-delete-table {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .alumnos-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .table-container {
+    margin: 1rem 0;
+  }
+
+  .alumnos-table {
+    min-width: 550px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInTable {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table-container {
+  animation: fadeInTable 0.6s ease-out forwards;
+}
+
+.alumnos-table tbody tr {
+  animation: fadeInTable 0.6s ease-out forwards;
+}
+
+.alumnos-table tbody tr:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.stat-card {
+  animation: fadeInTable 0.6s ease-out forwards;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Mejoras adicionales para DNI */
+.dni-cell {
+  background: rgba(79, 176, 198, 0.05);
+  border-radius: 4px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Hover especial para filas de alumnos */
+.alumnos-table tbody tr:hover .curso-badge {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(79, 176, 198, 0.4);
+}
+
+.alumnos-table tbody tr:hover .dni-cell {
+  background: rgba(79, 176, 198, 0.1);
+}

@@ -1,0 +1,71 @@
+/* App.css */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#root,
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 120px; /* Espacio para el footer fijo */
+  min-height: calc(100vh - 190px); /* 70px header + 120px footer */
+}
+
+/* Cuando hay navegación de admin, ajustar el margen */
+.admin-content {
+  margin-top: 140px; /* 70px header + 70px admin-nav */
+  padding-bottom: 120px; /* Espacio para el footer fijo */
+  min-height: calc(100vh - 260px); /* 140px headers + 120px footer */
+}
+
+/* Footer fijo */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0d1b2a;
+  color: #a9b2bc;
+  border-top: 1px solid #1b263b;
+  padding: 1.5rem 1rem;
+  font-family: "Poppins", sans-serif;
+  z-index: 998; /* Debajo del header y admin-nav pero encima del contenido */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive para el layout principal */
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 70px;
+    padding-bottom: 100px; /* Menos espacio en móvil */
+  }
+
+  .admin-content {
+    margin-top: 140px;
+    padding-bottom: 100px;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Evitar que el contenido se superponga */
+.content-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+}

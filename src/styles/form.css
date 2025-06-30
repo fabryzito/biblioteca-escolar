@@ -1,0 +1,180 @@
+.formulario-container {
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-container h2 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.formulario,
+.formularioLibro,
+.formularioAlumno {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.formulario input,
+.formulario select,
+.formularioLibro input,
+.formularioAlumno input,
+.formularioAlumno select {
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formularioLibro input:focus,
+.formularioAlumno input:focus,
+.formularioAlumno select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.formulario input:valid,
+.formularioLibro input:valid,
+.formularioAlumno input:valid {
+  border-color: #28a745;
+}
+
+.formulario input:invalid:not(:placeholder-shown),
+.formularioLibro input:invalid:not(:placeholder-shown),
+.formularioAlumno input:invalid:not(:placeholder-shown) {
+  border-color: #dc3545;
+}
+
+.form-group small {
+  color: #666;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.submit-btn,
+.formularioLibro button,
+.formularioAlumno button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover,
+.formularioLibro button:hover,
+.formularioAlumno button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.submit-btn:active,
+.formularioLibro button:active,
+.formularioAlumno button:active {
+  transform: translateY(0);
+}
+
+/* Estilos específicos para select */
+.formulario select,
+.formularioAlumno select {
+  cursor: pointer;
+  background-color: white;
+}
+
+.formulario select:hover,
+.formularioAlumno select:hover {
+  border-color: #007bff;
+}
+
+/* Estilos para inputs de fecha */
+.formulario input[type="date"] {
+  cursor: pointer;
+}
+
+/* Estilos para inputs numéricos */
+.formularioLibro input[type="number"],
+.formularioAlumno input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.formularioLibro input[type="number"]::-webkit-outer-spin-button,
+.formularioLibro input[type="number"]::-webkit-inner-spin-button,
+.formularioAlumno input[type="number"]::-webkit-outer-spin-button,
+.formularioAlumno input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formulario-container {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .formulario,
+  .formularioLibro,
+  .formularioAlumno {
+    max-width: 100%;
+  }
+}
+
+/* Estados de validación mejorados */
+.form-group input:focus:valid,
+.form-group select:focus:valid {
+  border-color: #28a745;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.form-group input:focus:invalid,
+.form-group select:focus:invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* Animaciones adicionales */
+.formulario-container {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

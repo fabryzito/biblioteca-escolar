@@ -1,0 +1,541 @@
+/* src/styles/prestamos.css */
+
+.prestamos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  /* Remover min-height ya que se maneja en App.css */
+}
+
+/* Agregar clase para el contenido de admin */
+.admin-content .prestamos-container {
+  padding-bottom: 2rem; /* Espacio adicional antes del footer */
+}
+
+/* Header de la sección */
+.prestamos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.prestamos-title {
+  margin: 0 0 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  letter-spacing: 0.5px;
+}
+
+.prestamos-subtitle {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #a9b2bc;
+  font-weight: 400;
+}
+
+/* Acciones principales */
+.prestamos-actions {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+  color: #e0e1dd;
+  border: 2px solid #4fb0c6;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(13, 27, 42, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4fb0c6 0%, #3ba3ad 100%);
+  color: #0d1b2a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 176, 198, 0.3);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Estadísticas */
+.prestamos-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: rgba(13, 27, 42, 0.05);
+  border: 1px solid rgba(79, 176, 198, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(79, 176, 198, 0.1);
+  border-color: #4fb0c6;
+  transform: translateY(-2px);
+}
+
+.stat-card.activos {
+  border-color: rgba(40, 167, 69, 0.3);
+}
+
+.stat-card.activos:hover {
+  background: rgba(40, 167, 69, 0.1);
+  border-color: #28a745;
+}
+
+.stat-card.vencidos {
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.stat-card.vencidos:hover {
+  background: rgba(220, 53, 69, 0.1);
+  border-color: #dc3545;
+}
+
+.stat-card.por-vencer {
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+.stat-card.por-vencer:hover {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: #ffc107;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #a9b2bc;
+  font-weight: 500;
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(13, 27, 42, 0.05);
+  border-radius: 16px;
+  border: 2px dashed rgba(79, 176, 198, 0.3);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #0d1b2a;
+  font-weight: 600;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #a9b2bc;
+}
+
+/* Contenedor de tabla */
+.table-container {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(79, 176, 198, 0.2);
+  margin-top: 2rem;
+}
+
+/* Tabla de préstamos */
+.prestamos-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Encabezado de tabla */
+.prestamos-table thead {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+}
+
+.prestamos-table th {
+  padding: 1.2rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #e0e1dd;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #4fb0c6;
+}
+
+.prestamos-table th:first-child {
+  padding-left: 1.5rem;
+}
+
+.prestamos-table th:last-child {
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+/* Filas de la tabla */
+.prestamos-table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(79, 176, 198, 0.1);
+}
+
+.prestamos-table tbody tr:hover {
+  background: rgba(79, 176, 198, 0.05);
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(79, 176, 198, 0.1);
+}
+
+.prestamos-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Alternancia de colores en filas */
+.row-even {
+  background: #ffffff;
+}
+
+.row-odd {
+  background: rgba(79, 176, 198, 0.02);
+}
+
+/* Filas especiales */
+.row-vencido {
+  background: rgba(220, 53, 69, 0.05) !important;
+  border-left: 4px solid #dc3545;
+}
+
+.row-por-vencer {
+  background: rgba(255, 193, 7, 0.05) !important;
+  border-left: 4px solid #ffc107;
+}
+
+/* Celdas de la tabla */
+.prestamos-table td {
+  padding: 1rem 0.8rem;
+  font-size: 0.9rem;
+  color: #0d1b2a;
+  vertical-align: middle;
+}
+
+.prestamos-table td:first-child {
+  padding-left: 1.5rem;
+}
+
+.prestamos-table td:last-child {
+  padding-right: 1.5rem;
+}
+
+/* Estilos específicos por celda */
+.id-cell {
+  font-weight: 600;
+  color: #a9b2bc;
+  font-size: 0.85rem;
+}
+
+.alumno-cell {
+  font-weight: 600;
+  color: #0d1b2a;
+  max-width: 180px;
+}
+
+.libro-cell {
+  color: #a9b2bc;
+  font-style: italic;
+  max-width: 200px;
+}
+
+.fecha-cell {
+  color: #a9b2bc;
+  font-weight: 500;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+.dias-cell {
+  text-align: center;
+}
+
+.estado-cell {
+  text-align: center;
+}
+
+.actions-cell {
+  text-align: center;
+}
+
+/* Badge de días restantes */
+.dias-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.dias-badge.normal {
+  background: rgba(79, 176, 198, 0.2);
+  color: #4fb0c6;
+}
+
+.dias-badge.por-vencer {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.dias-badge.vencido {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+}
+
+/* Badge de estado */
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.activo {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.status-badge.vencido {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Botones de acción en tabla */
+.btn-edit-table,
+.btn-return-table {
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit-table {
+  background: rgba(79, 176, 198, 0.1);
+  color: #4fb0c6;
+  border: 1px solid rgba(79, 176, 198, 0.3);
+}
+
+.btn-edit-table:hover {
+  background: #4fb0c6;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 176, 198, 0.3);
+}
+
+.btn-return-table {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.btn-return-table:hover {
+  background: #28a745;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive para tabla */
+@media (max-width: 1200px) {
+  .prestamos-table th,
+  .prestamos-table td {
+    padding: 0.8rem 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .alumno-cell,
+  .libro-cell {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prestamos-container {
+    margin: 0 1rem 2rem;
+    margin-top: 140px; /* Mantener el espacio para ambas barras */
+    padding: 1rem;
+  }
+
+  .prestamos-title {
+    font-size: 2rem;
+  }
+
+  .prestamos-subtitle {
+    font-size: 1rem;
+  }
+
+  .prestamos-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+  }
+
+  .prestamos-table {
+    min-width: 800px;
+  }
+
+  .prestamos-table th,
+  .prestamos-table td {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .prestamos-table th:first-child,
+  .prestamos-table td:first-child {
+    padding-left: 1rem;
+  }
+
+  .prestamos-table th:last-child,
+  .prestamos-table td:last-child {
+    padding-right: 1rem;
+  }
+
+  .alumno-cell,
+  .libro-cell {
+    max-width: 120px;
+  }
+
+  .btn-edit-table,
+  .btn-return-table {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prestamos-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .prestamos-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .table-container {
+    margin: 1rem 0;
+  }
+
+  .prestamos-table {
+    min-width: 700px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInTable {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table-container {
+  animation: fadeInTable 0.6s ease-out forwards;
+}
+
+.prestamos-table tbody tr {
+  animation: fadeInTable 0.6s ease-out forwards;
+}
+
+.prestamos-table tbody tr:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.stat-card {
+  animation: fadeInTable 0.6s ease-out forwards;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Efectos especiales para filas vencidas */
+.row-vencido:hover {
+  background: rgba(220, 53, 69, 0.1) !important;
+  box-shadow: 0 4px 16px rgba(220, 53, 69, 0.2);
+}
+
+.row-por-vencer:hover {
+  background: rgba(255, 193, 7, 0.1) !important;
+  box-shadow: 0 4px 16px rgba(255, 193, 7, 0.2);
+}
+
+/* Truncar texto largo */
+.alumno-cell,
+.libro-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

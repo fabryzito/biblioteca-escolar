@@ -1,0 +1,288 @@
+/* src/styles/buscador.css */
+
+/* Contenedor principal con efecto borroso mejorado */
+.buscador-container {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  margin-top: 40px; /* 70px del header + 70px del admin-nav */
+  padding: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  background: rgba(13, 27, 42, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(79, 176, 198, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo sutil en el fondo */
+.buscador-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4fb0c6, transparent);
+  opacity: 0.6;
+}
+
+/* Encabezado del buscador */
+.buscador-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.buscador-header h2 {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #e0e1dd;
+  letter-spacing: 0.5px;
+}
+
+.buscador-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #a9b2bc;
+  opacity: 0.9;
+}
+
+/* Contenedor del input mejorado */
+.buscador-input-container {
+  position: relative;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buscador-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  padding-right: 3.5rem;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(79, 176, 198, 0.3);
+  border-radius: 12px;
+  outline: none;
+  color: #e0e1dd;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.buscador-input::placeholder {
+  color: #a9b2bc;
+  opacity: 0.8;
+}
+
+.buscador-input:focus {
+  border-color: #4fb0c6;
+  box-shadow: 0 0 20px rgba(79, 176, 198, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Botón de limpiar búsqueda mejorado */
+.limpiar-btn {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: rgba(79, 176, 198, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  color: #4fb0c6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.limpiar-btn:hover {
+  background: rgba(79, 176, 198, 0.3);
+  color: #e0e1dd;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Resultados */
+.resultados-container h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: #e0e1dd;
+  font-weight: 500;
+}
+
+.no-resultados {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.no-resultados p {
+  font-size: 1.1rem;
+  color: #ff6b6b;
+  margin: 0;
+}
+
+/* Grid de tarjetas mejorado */
+.libros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Tarjeta de libro rediseñada */
+.libro-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(79, 176, 198, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.libro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(79, 176, 198, 0.2);
+  border-color: #4fb0c6;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.libro-info {
+  padding: 1.5rem;
+}
+
+.libro-titulo {
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e0e1dd;
+  line-height: 1.3;
+}
+
+.libro-autor {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #a9b2bc;
+  font-weight: 500;
+}
+
+.libro-year {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #a9b2bc;
+  opacity: 0.8;
+}
+
+.libro-stock {
+  margin-top: 1rem;
+}
+
+/* Badges de stock mejorados */
+.stock-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.stock-badge.disponible {
+  background: linear-gradient(135deg, #4fb0c6, #3ba3ad);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 176, 198, 0.3);
+}
+
+.stock-badge.agotado {
+  background: linear-gradient(135deg, #ff6b6b, #ff4e4e);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Sugerencias iniciales mejoradas */
+.sugerencias {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(79, 176, 198, 0.1);
+}
+
+.sugerencias h3 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #e0e1dd;
+}
+
+.sugerencias p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #a9b2bc;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .buscador-container {
+    margin: 0 1rem 2rem;
+    margin-top: 140px; /* Mantener el espacio para ambas barras */
+    padding: 1.5rem;
+  }
+
+  .buscador-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .libros-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .buscador-input {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.buscador-container {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.libro-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.libro-card:nth-child(even) {
+  animation-delay: 0.1s;
+}
