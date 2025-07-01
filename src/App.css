@@ -69,3 +69,12 @@ html {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* Estilos globales para páginas de error */
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 190px);
+  padding: 2rem;
+}

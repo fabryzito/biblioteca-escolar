@@ -17,9 +17,10 @@
     {
       "id": "255c",
       "titulo": "Caperusita Roja",
-      "autor": "Nose",
+      "autor": "matias",
       "year": "2022",
-      "stock": "0"
+      "stock": "0",
+      "imagen": "https://th.bing.com/th/id/R.061872e06bb3f04e2819682ee787ca17?rik=KzVPm7MZjFbr6Q&pid=ImgRaw&r=0"
     },
     {
       "id": "256d",
@@ -43,11 +44,28 @@
       "stock": "15"
     },
     {
-      "id": "071c",
-      "titulo": "Quijote",
-      "autor": "franco",
-      "year": "2002",
-      "stock": "90"
+      "id": "0322",
+      "titulo": "Los 3 chanchitos",
+      "autor": "Fabri",
+      "year": "2024",
+      "stock": "4",
+      "imagen": "https://www.todopapas.com/img/cuentos/1/5/1/6/1516.jpg"
+    },
+    {
+      "id": "4874",
+      "titulo": "aladdin",
+      "autor": "negro fabri",
+      "year": "2005",
+      "stock": "20",
+      "imagen": "https://th.bing.com/th/id/R.c435bf74975eabb07029ac24680844db?rik=oFU5mnAIZITqyQ&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "98a6",
+      "titulo": "Nuevo",
+      "autor": "nuevo",
+      "year": "2000",
+      "stock": "1",
+      "imagen": ""
     }
   ],
   "alumnos": [

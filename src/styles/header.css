@@ -20,21 +20,33 @@
   justify-content: space-between;
   padding: 0 1.5rem;
   height: 70px;
+  position: relative;
 }
 
-.nav-left,
-.nav-right {
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right-desktop {
   display: flex;
   align-items: center;
 }
 
 .site-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 1px;
   margin-right: 2rem;
   color: #e0e1dd;
+  white-space: nowrap;
 }
 
 .nav-link {
@@ -69,7 +81,7 @@
 }
 
 .btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
   padding: 0.45rem 1.1rem;
   border: 2px solid transparent;
@@ -77,6 +89,8 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+  display: inline-block;
+  text-align: center;
 }
 
 .login-btn {
@@ -95,7 +109,6 @@
   background-color: #ff6b6b;
   color: #ffffff;
   border-color: #ff6b6b;
-  margin-left: 1rem;
 }
 
 .logout-btn:hover {
@@ -104,3 +117,206 @@
   transform: translateY(-2px);
 }
 
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #e0e1dd;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger-active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menú móvil */
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  width: 280px;
+  height: calc(100vh - 70px);
+  background-color: #0d1b2a;
+  transition: right 0.3s ease;
+  z-index: 999;
+  border-left: 1px solid #1b263b;
+}
+
+.mobile-menu-open {
+  right: 0;
+}
+
+.mobile-menu-content {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-nav-link {
+  color: #a9b2bc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #1b263b;
+  transition: color 0.3s;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: #4fb0c6;
+}
+
+.mobile-auth-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #1b263b;
+}
+
+.mobile-auth-btn {
+  width: 100%;
+  margin: 0;
+}
+
+/* Overlay para cerrar menú */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Media Queries */
+
+/* Tablets grandes y desktop pequeño */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+    margin-right: 1.5rem;
+  }
+
+  .nav-link {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .nav-right-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .site-title {
+    font-size: 1.2rem;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    right: -100%;
+  }
+
+  .mobile-menu-open {
+    right: 0;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+  .nav {
+    padding: 0 0.75rem;
+  }
+
+  .site-title {
+    font-size: 1.1rem;
+  }
+
+  .mobile-menu-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Mejoras adicionales para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after,
+  .btn,
+  .hamburger-line,
+  .mobile-menu,
+  .mobile-nav-link {
+    transition: none;
+  }
+}
+
+/* Focus states para accesibilidad */
+.hamburger:focus {
+  outline: 2px solid #4fb0c6;
+  outline-offset: 2px;
+}
+
+.mobile-nav-link:focus {
+  outline: 2px solid #4fb0c6;
+  outline-offset: 2px;
+  background-color: rgba(79, 176, 198, 0.1);
+}
+
+/* Hover states mejorados para móvil */
+@media (hover: hover) {
+  .mobile-nav-link:hover {
+    background-color: rgba(79, 176, 198, 0.1);
+  }
+}

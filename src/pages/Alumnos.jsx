@@ -147,20 +147,7 @@ const Alumnos = () => {
       </div>
 
       <div className="alumnos-content">
-        <div className="alumnos-stats">
-          <div className="stat-card">
-            <span className="stat-number">{alumnos.length}</span>
-            <span className="stat-label">Total de Alumnos</span>
-          </div>
-          <div className="stat-card">
-            <span className="stat-number">{Object.keys(estadisticasCursos).length}</span>
-            <span className="stat-label">Cursos Activos</span>
-          </div>
-          <div className="stat-card">
-            <span className="stat-number">{cursoConMasAlumnos || "N/A"}</span>
-            <span className="stat-label">Curso con Más Alumnos</span>
-          </div>
-        </div>
+       
 
         {alumnos.length === 0 ? (
           <div className="empty-state">
