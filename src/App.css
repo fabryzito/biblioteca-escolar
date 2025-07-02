@@ -1,10 +1,11 @@
 /* App.css */
 body,
 html {
-  height: 100%;
+   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  background-color: #0d1b2a; /* tu color base */
+  overflow-x: hidden;
 }
 
 #root,
