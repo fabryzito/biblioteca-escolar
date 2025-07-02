@@ -48,11 +48,6 @@ const BuscadorLibros = () => {
     setBusqueda("")
   }
 
-  const handleImageError = (e) => {
-    e.target.src = "/placeholder.svg?height=200&width=150"
-    e.target.alt = "Imagen no disponible"
-  }
-
   if (cargando) {
     return (
       <div className="buscador-container">
@@ -137,7 +132,6 @@ const BuscadorLibros = () => {
                     src={libro.imagen || "/placeholder.svg?height=200&width=150"}
                     alt={`Portada de ${libro.titulo}`}
                     className="libro-image"
-                    onError={handleImageError}
                   />
                   <div className="libro-overlay">
                     <span className={`stock-badge ${libro.stock > 0 ? "disponible" : "agotado"}`}>

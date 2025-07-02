@@ -19,7 +19,7 @@ const PrestamoForm = (props) => {
             <option value="">Seleccionar alumno...</option>
             {alumnos.map((alumno) => (
               <option key={alumno.id} value={alumno.id}>
-                {alumno.nombre} - {alumno.curso} (DNI: {alumno.dni})
+                {alumno.nombre} - {alumno.curso} (DNI: {alumno.dni}) 
               </option>
             ))}
           </select>

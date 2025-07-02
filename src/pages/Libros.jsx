@@ -80,8 +80,7 @@ const Libros = () => {
 
   const handleEditSubmit = (e) => {
     e.preventDefault();
-    axios
-      .put(`http://localhost:4004/libros/${form.id}`, form)
+    axios.put(`http://localhost:4004/libros/${form.id}`, form)
       .then((res) => {
         setLibros(
           libros.map((libro) => (libro.id === form.id ? res.data : libro))
@@ -97,11 +96,6 @@ const Libros = () => {
         setShowAddButton(true);
       })
       .catch((err) => console.error(err));
-  };
-
-  const handleImageError = (e) => {
-    e.target.src = "/placeholder.svg?height=60&width=40";
-    e.target.alt = "Imagen no disponible";
   };
 
   return (
@@ -178,7 +172,6 @@ const Libros = () => {
                           }
                           alt={`Portada de ${libro.titulo}`}
                           className="book-image"
-                          onError={handleImageError}
                         />
                       </div>
                     </td>

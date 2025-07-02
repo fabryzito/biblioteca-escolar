@@ -81,8 +81,7 @@ const Prestamos = () => {
     const prestamo = prestamos.find((p) => p.id === id)
     const libro = libros.find((l) => l.id === prestamo.libroId)
 
-    axios
-      .delete(`http://localhost:4004/prestamos/${id}`)
+    axios.delete(`http://localhost:4004/prestamos/${id}`)
       .then(() => {
         // Aumentar el stock del libro
         const libroActualizado = { ...libro, stock: libro.stock + 1 }
@@ -202,24 +201,6 @@ const Prestamos = () => {
       </div>
 
       <div className="prestamos-content">
-        <div className="prestamos-stats">
-          <div className="stat-card">
-            <span className="stat-number">{prestamos.length}</span>
-            <span className="stat-label">Total de Préstamos</span>
-          </div>
-          <div className="stat-card activos">
-            <span className="stat-number">{prestamosActivos.length}</span>
-            <span className="stat-label">Préstamos Activos</span>
-          </div>
-          <div className="stat-card vencidos">
-            <span className="stat-number">{prestamosVencidos.length}</span>
-            <span className="stat-label">Préstamos Vencidos</span>
-          </div>
-          <div className="stat-card por-vencer">
-            <span className="stat-number">{prestamosPorVencer.length}</span>
-            <span className="stat-label">Por Vencer (3 días)</span>
-          </div>
-        </div>
 
         {prestamos.length === 0 ? (
           <div className="empty-state">

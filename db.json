@@ -17,9 +17,9 @@
     {
       "id": "255c",
       "titulo": "Caperusita Roja",
-      "autor": "matias",
-      "year": "2022",
-      "stock": "0",
+      "autor": "Charles Perrault",
+      "year": "1810",
+      "stock": "01",
       "imagen": "https://th.bing.com/th/id/R.061872e06bb3f04e2819682ee787ca17?rik=KzVPm7MZjFbr6Q&pid=ImgRaw&r=0"
     },
     {
@@ -27,59 +27,60 @@
       "titulo": "El Principito",
       "autor": "Antoine de Saint-Exupéry",
       "year": "1943",
-      "stock": 2
+      "stock": 2,
+      "imagen": "https://tse4.mm.bing.net/th/id/OIP.5ppgJvxoeRePzLc2Tf0qTwHaK-?cb=thvnextc2&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
       "id": "257e",
       "titulo": "Don Quijote",
       "autor": "Miguel de Cervantes",
       "year": "1605",
-      "stock": 0
+      "stock": 0,
+      "imagen": "https://tse3.mm.bing.net/th/id/OIP.IhdtrmooGMVi7-IkHooufAHaJl?cb=thvnextc2&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
       "id": "2ca3",
       "titulo": "Libro de la selva",
-      "autor": "gustavo",
+      "autor": "Rudyard Kipling",
       "year": "2020",
-      "stock": "15"
+      "stock": "15",
+      "imagen": "https://th.bing.com/th/id/R.be31096a5e9b016590a7d43e0cdd9902?rik=GNXJHJa4ZdON%2fg&riu=http%3a%2f%2fimg.lum.dolimg.com%2fv1%2fimages%2fel_libro_de_la_selva_da2cb807.jpeg%3fregion%3d0%2c0%2c1400%2c2100&ehk=DIJU%2fG%2fuDiUiYyorRPbbR9oLmKA%2bqiVwi5R83BydoL0%3d&risl=&pid=ImgRaw&r=0"
     },
     {
       "id": "0322",
-      "titulo": "Los 3 chanchitos",
-      "autor": "Fabri",
+      "titulo": "Los 3 Chanchitos",
+      "autor": "Pinto Colving",
       "year": "2024",
-      "stock": "4",
+      "stock": 3,
       "imagen": "https://www.todopapas.com/img/cuentos/1/5/1/6/1516.jpg"
     },
     {
       "id": "4874",
-      "titulo": "aladdin",
-      "autor": "negro fabri",
+      "titulo": "Aladdin",
+      "autor": "Antoine Galland",
       "year": "2005",
-      "stock": "20",
+      "stock": 19,
       "imagen": "https://th.bing.com/th/id/R.c435bf74975eabb07029ac24680844db?rik=oFU5mnAIZITqyQ&pid=ImgRaw&r=0"
-    },
-    {
-      "id": "98a6",
-      "titulo": "Nuevo",
-      "autor": "nuevo",
-      "year": "2000",
-      "stock": "1",
-      "imagen": ""
     }
   ],
   "alumnos": [
     {
       "id": "5d38",
-      "nombre": "Franco",
+      "nombre": "Franco Sadas",
       "dni": "45876903",
-      "curso": "6to A"
+      "curso": "5to"
     },
     {
       "id": "6e49",
       "nombre": "María García",
       "dni": "12345678",
       "curso": "5to B"
+    },
+    {
+      "id": "94cc",
+      "nombre": "Oriana",
+      "dni": "45231111",
+      "curso": "7mo"
     }
   ],
   "prestamos": [
@@ -91,11 +92,18 @@
       "id": "0eac"
     },
     {
-      "id": "42eb",
-      "alumnoId": "5d38",
-      "libroId": "255c",
-      "fechaEntrega": "2025-06-27",
-      "fechaDevolucion": "2025-06-29"
+      "id": "86b9",
+      "alumnoId": "6e49",
+      "libroId": "4874",
+      "fechaEntrega": "2025-07-02",
+      "fechaDevolucion": "2025-07-05"
+    },
+    {
+      "id": "2e6c",
+      "alumnoId": "94cc",
+      "libroId": "0322",
+      "fechaEntrega": "2025-07-02",
+      "fechaDevolucion": "2025-07-07"
     }
   ],
   "integrantes": [
